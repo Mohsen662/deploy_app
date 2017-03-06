@@ -1,41 +1,30 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
-*= require devise_bootstrap_views
- *= require_tree .
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- */
+ *= require_tree .
+ *= require devise_bootstrap_views
+*/
 
- body {
-   margin: 0;
-   font-family: 'BYekan', sans-serif;
- }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
- #welcome {
-   width: 100%;
+#hero {
    padding: 200px 0;
-   background-color: #a3a3a3;
-   div {
-     margin: 0 auto;
-     h1 {
-      font-size: 4.3em;
-      text-align: center;
-      color: #fff;
-      }
-      h2 {
-        font-size: 3.5em;
-        text-align: center;
-        color: darkmagenta;
-      }
+   background-image: image-url('hero-bg.jpg');
+   background-size: cover;
+   width: 100%;
+   background-position: center;
+   font-family: 'BYekan', sans-serif;
+   h1 {
+     font-size: 4.3em;
+     color: #fff;
    }
-   
+   h2 {
+     font-size: 3.5em;
+     color: pink;
+   }
  }
