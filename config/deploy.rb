@@ -4,6 +4,7 @@ lock "3.7.2"
 set :application, "deploy_app"
 set :repo_url, "git@github.com:Mohsen662/deploy_app.git"
 
+set :passenger_restart_with_touch, true
 
 set :deploy_to, '/home/deploy/deploy_app'
 
