@@ -4,6 +4,14 @@ require "capistrano/setup"
 # Include default deployment tasks
 require "capistrano/deploy"
 
+require 'capistrano/rbenv'
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '2.4.0'
+
+require 'capistrano/bundler'
+require 'capistrano/rails'
+
+
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"
